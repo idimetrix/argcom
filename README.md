@@ -1,6 +1,18 @@
 # argcom
 `argcom` is a straightforward CLI argument parser with no added complexity or opinions.
 
+## Installation
+
+To install the package, use npm:
+
+```bash
+pnpm add argcom
+
+yarn install argcom
+
+npm install argcom
+```
+
 ## Usage
 
 `argcom()` accepts one or two arguments:

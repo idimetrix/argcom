@@ -1,6 +1,6 @@
 {
   "name": "argcom",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "`argcom` is a straightforward CLI argument parser with no added complexity or opinions.",
   "license": "MIT",
   "author": {
