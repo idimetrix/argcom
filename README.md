@@ -15,16 +15,16 @@ npm install argcom
 
 ## Usage
 
-`argcom()` accepts one or two arguments:
+`arg()` accepts one or two arguments:
 
 1. A command line specification object.
 2. An optional options object, which defaults to `{ permissive: false, argv: process.argv.slice(2), stopAtPositional: false }`.
 
-It returns an object containing the command-line values. Any parameters not used by options are placed in the `result._` array, which is always returned (even if empty). `argcom()` does not validate or enforce requirements—this is up to the application.
+It returns an object containing the command-line values. Any parameters not used by options are placed in the `result._` array, which is always returned (even if empty). `arg()` does not validate or enforce requirements—this is up to the application.
 
 ```typescript
 // index.ts
-import { argcom } from 'argcom';
+import { arg } from 'argcom';
 
 const args = arg({
 	// Types
