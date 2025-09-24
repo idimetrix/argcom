@@ -33,13 +33,30 @@
   },
   "homepage": "https://github.com/idimetrix/argcom#readme",
   "url": "https://github.com/idimetrix/argcom/issue",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/idimetrix/argcom.git"
+  },
   "bugs": {
     "url": "https://github.com/idimetrix/argcom/issues"
   },
-  "keywords": [],
+  "keywords": [
+    "cli",
+    "argument",
+    "parser",
+    "command-line",
+    "args",
+    "argv",
+    "minimist",
+    "yargs",
+    "commander",
+    "typescript"
+  ],
   "files": [
     "dist",
-    "package.json"
+    "package.json",
+    "README.md",
+    "LICENSE"
   ],
   "types": "./dist/index.d.ts",
   "main": "./dist/index.js",
@@ -53,9 +70,11 @@
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ]
+  },
+  "engines": {
+    "node": ">=14.0.0"
   },
   "devDependencies": {
     "@types/node": "24.5.2",

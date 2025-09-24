@@ -15,7 +15,20 @@ class ArgcomError extends Error {
 type ArgHandler<T> = (value: string, name: string, prev?: T[]) => T[];
 
 interface ArgOptions {
-  [key: string]: string | ArgHandler<any> | [ArgHandler<any>];
+  [key: string]:
+    | string
+    | ArgHandler<any>
+    | [ArgHandler<any>]
+    | BooleanConstructor
+    | StringConstructor
+    | NumberConstructor
+    | BigIntConstructor
+    | Function
+    | [BooleanConstructor]
+    | [StringConstructor]
+    | [NumberConstructor]
+    | [BigIntConstructor]
+    | [Function];
 }
 
 interface ArgConfig {
@@ -90,7 +103,7 @@ export function arg(
     } else {
       throw new ArgcomError(
         `type missing or not a function or valid array type: ${key}`,
-        "ARG_CONFIG_VAD_TYPE",
+        "ARG_CONFIG_BAD_TYPE",
       );
     }
 
@@ -203,3 +216,7 @@ arg.COUNT = arg.flag(
 );
 
 arg.ArgcomError = ArgcomError;
+
+// Export everything for better API
+export { ArgcomError };
+export default arg;
